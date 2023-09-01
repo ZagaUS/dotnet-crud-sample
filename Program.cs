@@ -22,12 +22,12 @@ var builder = WebApplication.CreateBuilder(args);
     services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
     // configure strongly typed settings object
-    services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings"));
+    // services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings"));
 
     // configure DI for application services
-    services.AddSingleton<DataContext>();
+    // services.AddSingleton<DataContext>();
     //services.AddScoped<IUserRepository, UserRepository>();
-    //services.AddScoped<IUserService, UserService>();
+    services.AddScoped<IUserService, UserService>();
 }
 
 var app = builder.Build();
