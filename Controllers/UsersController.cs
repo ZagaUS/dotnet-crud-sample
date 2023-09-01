@@ -23,12 +23,12 @@ public class UsersController : ControllerBase
         return Ok(users);
     }
 
-    // [HttpGet("{id}")]
-    // public async Task<IActionResult> GetById(int id)
-    // {
-    //     var user = await _userService.GetById(id);
-    //     return Ok(user);
-    // }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+       var users = "jey  get"
+        return Ok(users);
+    }
 
     // [HttpPost]
     // public async Task<IActionResult> Create(CreateRequest model)
