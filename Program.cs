@@ -27,7 +27,7 @@ var builder = WebApplication.CreateBuilder(args);
     // configure DI for application services
     // services.AddSingleton<DataContext>();
     //services.AddScoped<IUserRepository, UserRepository>();
-    services.AddScoped<IUserService, UserService>();
+    // services.AddScoped<IUserService, UserService>();
 }
 
 var app = builder.Build();
