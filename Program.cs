@@ -26,18 +26,18 @@ var builder = WebApplication.CreateBuilder(args);
 
     // configure DI for application services
     services.AddSingleton<DataContext>();
-    services.AddScoped<IUserRepository, UserRepository>();
-    services.AddScoped<IUserService, UserService>();
+    //services.AddScoped<IUserRepository, UserRepository>();
+    //services.AddScoped<IUserService, UserService>();
 }
 
 var app = builder.Build();
 
-// ensure database and tables exist
-{
-    using var scope = app.Services.CreateScope();
-    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
-    await context.Init();
-}
+// // ensure database and tables exist
+// {
+//     using var scope = app.Services.CreateScope();
+//     var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+//     await context.Init();
+// }
 
 // configure HTTP request pipeline
 {
